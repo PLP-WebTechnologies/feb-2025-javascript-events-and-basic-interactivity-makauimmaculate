@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive JavaScript Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Basic Interactivity Website</h1>
+    <nav>
+      <button class="tab-button active" data-tab="homeTab">Home</button>
+      <button class="tab-button" data-tab="galleryTab">Gallery</button>
+      <button class="tab-button" data-tab="formTab">Form</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Section -->
+    <section id="homeTab" class="tab-content active">
+      <h2>Welcome!</h2>
+      <p>This site demonstrates various JavaScript interactivity features.</p>
+      <!-- Interactive Button -->
+      <button id="colorButton">Click or Hover Me!</button>
+      <!-- Display keypress status -->
+      <p id="keyStatus">Press any key to see its value here.</p>
+      <p><em>(Try double-clicking or long-pressing the button for a secret!)</em></p>
+      
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galleryTab" class="tab-content">
+      <h2>Image Gallery</h2>
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/17200811/pexels-photo-17200811/free-photo-of-great-bougainvillea-flowers-growing-on-tree.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Random Image 1">
+        </div>
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/27037687/pexels-photo-27037687/free-photo-of-macaw-parrot-in-forest.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Nature Image">
+        </div>
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/31768850/pexels-photo-31768850/free-photo-of-enchanting-woman-in-lush-garden-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Tech Image">
+        </div>
+        <div class="slide">
+            <img src="https://images.pexels.com/photos/31649016/pexels-photo-31649016/free-photo-of-vibrant-cherry-blossom-trees-in-urban-setting.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="Random Image 1">
+          </div>
+          <div class="slide">
+            <img src="https://images.pexels.com/photos/158063/bellingrath-gardens-alabama-landscape-scenic-158063.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nature Image">
+          </div>
+          <div class="slide">
+            <img src="https://images.pexels.com/photos/250591/pexels-photo-250591.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tech Image">
+          </div>
+      </div>
+      <!-- Slideshow controls -->
+      <button class="prev">&#10094; Prev</button>
+      <button class="next">Next &#10095;</button>
+    </section>
+
+    <!-- Form Section -->
+    <section id="formTab" class="tab-content">
+      <h2>Contact Form</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Name (required):</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error-message" id="nameError"></span>
+
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message" id="emailError"></span>
+
+        <label for="password">Password (min 8 chars):</label>
+        <input type="password" id="password" name="password" minlength="8" required>
+        <span class="error-message" id="passwordError"></span>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formStatus"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
